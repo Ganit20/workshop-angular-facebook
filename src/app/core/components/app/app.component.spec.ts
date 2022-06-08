@@ -1,7 +1,7 @@
-import { HomePageComponent } from './home-page/home-page.component';
-import { MenuComponent } from './menu/menu.component';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MenuComponent } from '../menu/menu.component';
+import { HomePageComponent } from '../pages/home-page/home-page.component';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
