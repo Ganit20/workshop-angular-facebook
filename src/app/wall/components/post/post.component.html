@@ -1,0 +1,22 @@
+<div class="card my-3" *ngIf="post" appHighlight>
+    <div class="card-header d-flex align-items-start">
+      <img src="" class="avatar rounded" alt />
+      <div class="flex-fill">
+        <a>
+          <h4>
+              <img [src]="post.author.avatarUrl" alt="error"/>
+              {{ post.author.name}}
+            </h4>
+        </a>
+        <a>
+          <small>{{post.createdTime | date:'dd.MM.y h:mm:ss'}}</small>
+        </a>
+      </div>
+    </div>
+    <img class="card-img-top" [src]="post.images[0]" alt />
+    <div class="card-body">
+      <p class="card-text">{{post.body}}</p>
+    </div>
+<div class="footer"></div>
+  </div>
+  
