@@ -1,3 +1,9 @@
 <div>
-    <app-post-list [posts]="fakePosts"></app-post-list>
+    <div *ngIf="!isPostsLoaded" class="container">
+        <img src="assets/Fidget-spinner.gif" alt="loading..."/>
+    </div>
+    <div *ngIf="isPostsLoaded && posts.length==0" class="allert-danger">
+        Lista pusta
+    </div>
+    <app-post-list [posts]="posts"></app-post-list>
 </div>

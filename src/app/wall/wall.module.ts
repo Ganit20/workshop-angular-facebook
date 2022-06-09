@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostComponent } from './components/post/post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { PostsService } from './services/posts.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
     PostComponent,
-    PostListComponent
+    PostListComponent,
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
-  exports: [PostListComponent]
+  exports: [PostListComponent],
+  providers:[PostsService]
 })
 export class WallModule { }
