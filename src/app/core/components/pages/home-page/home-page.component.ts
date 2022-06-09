@@ -20,7 +20,7 @@ export class HomePageComponent implements OnInit {
   private async setupPosts() {
     this.isPostsLoaded=false;
     const posts = await this.postsService.getPosts();  
-    this.posts=Sorter.sortBy(posts);
+    this.posts=Sorter.sortBy(posts,x=>x.createdTime);
     this.isPostsLoaded=true;
   }
 }
