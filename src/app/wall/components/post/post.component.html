@@ -8,9 +8,11 @@
               {{ post.author.name}}
             </h4>
         </a>
-        <a>
-          <small>{{post.createdTime | myDate:'dd.MM.y h:mm:ss'}}</small>
+        <small>
+        <a [routerLink]="getPostProfileUrl()">
+          {{post.createdTime | myDate:'dd.MM.y h:mm:ss'}}
         </a>
+        </small>
       </div>
     </div>
     <img class="card-img-top" [src]="post.images[0]" alt />

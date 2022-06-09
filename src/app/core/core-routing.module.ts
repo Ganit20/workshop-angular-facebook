@@ -9,9 +9,14 @@ const routes: Routes = [
       component:HomePageComponent
     },
     {
+      path:'posts',
+      loadChildren: () => import('../wall/wall.routing.module').then(x=> x.WallRoutingModule)
+    },
+    {
       path:'**',
       component: NotFoundPageComponent
-    }
+    },
+     
 
 ];
 

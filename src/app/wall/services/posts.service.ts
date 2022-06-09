@@ -14,6 +14,10 @@ export class PostsService {
     return this.makeRequest<Post[]>(environment.postsUrl);
   }
 
+  getPostsById(id:string)  {
+    return this.makeRequest<Post>(`${environment.postsUrl}/${id}`);
+  }
+
   private makeRequest<T>(url:string): Promise<T> {
     return lastValueFrom<T>(this.http.get<T>(url));
   }

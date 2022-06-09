@@ -5,6 +5,8 @@ import { PostComponent } from './components/post/post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostsService } from './services/posts.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PostProfilePageComponent } from './components/post-profile-page/post-profile.component';
+import { WallRoutingModule } from './wall.routing.module';
 
 
 
@@ -12,11 +14,13 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     PostComponent,
     PostListComponent,
+    PostProfilePageComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    WallRoutingModule
   ],
   exports: [PostListComponent],
   providers:[PostsService]

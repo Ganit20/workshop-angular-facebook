@@ -13,4 +13,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getPostProfileUrl():string {
+    return `/posts/${this.post?.id}`
+  }
 }
