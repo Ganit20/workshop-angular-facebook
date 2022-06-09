@@ -1,4 +1,4 @@
-import { NotFoundPageComponent } from './components/pages/home-page/not-found-page/not-found-page.component';
+import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
