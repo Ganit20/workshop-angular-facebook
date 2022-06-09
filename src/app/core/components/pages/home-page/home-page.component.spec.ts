@@ -1,3 +1,6 @@
+import { WallModule } from './../../../../wall/wall.module';
+import { PostComponent } from './../../../../wall/components/post/post.component';
+import { PostListComponent } from './../../../../wall/components/post-list/post-list.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageComponent } from './home-page.component';
@@ -8,7 +11,8 @@ describe('HomePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageComponent ]
+      declarations: [ HomePageComponent ],
+      imports:[WallModule]
     })
     .compileComponents();
 
