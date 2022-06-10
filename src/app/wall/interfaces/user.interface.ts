@@ -3,3 +3,7 @@ export interface User {
     name:      string;
     avatarUrl: string;
 }
+export interface Credentials {
+    email:        string;
+    password:      string;
+}

@@ -13,6 +13,10 @@ const routes: Routes = [
       loadChildren: () => import('../wall/wall.routing.module').then(x=> x.WallRoutingModule)
     },
     {
+      path:'profile',
+      loadChildren: () => import('../user/user-routing.module').then(x=> x.UserRoutingModule)
+    },
+    {
       path:'**',
       component: NotFoundPageComponent
     },

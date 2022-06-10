@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { UserModule } from './../user/user.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from '../shared/shared.module';
@@ -20,6 +22,8 @@ import { CoreRoutingModule } from './core-routing.module';
     BrowserModule,
     CoreRoutingModule,
     WallModule,
+    UserModule,
+    FormsModule,
     SharedModule
   ],
   providers: [],
