@@ -1,4 +1,5 @@
 <app-post [post]="post"
-*ngFor="let post of posts">
+*ngFor="let post of posts | paginate: { itemsPerPage: 2, currentPage:p }" >
 </app-post>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 
