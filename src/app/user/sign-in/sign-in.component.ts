@@ -22,7 +22,8 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
   }
   OnSubmit() {
-    this.userService.signIn(this.credentials as Credentials)
-    this.router.navigateByUrl('profile')
+    const status=this.userService.signIn(this.credentials as Credentials)
+    if(status)  
+      this.router.navigateByUrl('profile')
   }
 }

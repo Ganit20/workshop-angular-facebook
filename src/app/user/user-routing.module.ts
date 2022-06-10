@@ -4,11 +4,13 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignOutComponent } from './sign-out/sign-out.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { OnlyForAuthUserGuard } from '../user.guards/only-for-auth-user.guard';
 
 const routes: Routes = [
   {
     path:'',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate:[OnlyForAuthUserGuard]
   },
   {
     path:'register',
@@ -16,7 +18,8 @@ const routes: Routes = [
   } ,
   {
     path:'logout',
-    component:SignOutComponent
+    component:SignOutComponent,
+    canActivate:[OnlyForAuthUserGuard]
   } ,
   {
     path:'login',

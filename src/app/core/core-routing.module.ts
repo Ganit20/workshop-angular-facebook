@@ -1,7 +1,8 @@
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
+import { OnlyForAuthUserGuard } from '../user.guards/only-for-auth-user.guard';
 
 const routes: Routes = [
     {
@@ -14,7 +15,7 @@ const routes: Routes = [
     },
     {
       path:'profile',
-      loadChildren: () => import('../user/user-routing.module').then(x=> x.UserRoutingModule)
+      loadChildren: () => import('../user/user-routing.module').then(x=> x.UserRoutingModule),
     },
     {
       path:'**',
